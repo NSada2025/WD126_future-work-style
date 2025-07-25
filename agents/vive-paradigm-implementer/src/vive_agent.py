@@ -13,9 +13,14 @@ import time
 import json
 from datetime import datetime
 from typing import Dict, List, Optional, Tuple
-from .prototype_generator import PrototypeGenerator
-from .learning_guide import LearningGuideGenerator
-from .template_manager import TemplateManager
+try:
+    from .prototype_generator import PrototypeGenerator
+    from .learning_guide import LearningGuideGenerator
+    from .template_manager import TemplateManager
+except ImportError:
+    from prototype_generator import PrototypeGenerator
+    from learning_guide import LearningGuideGenerator
+    from template_manager import TemplateManager
 
 
 class ViveParadigmImplementer:

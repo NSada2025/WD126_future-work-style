@@ -1081,18 +1081,16 @@ def create_sample_visualization():
     # サブプロット4: 統計サマリー（テキスト）
     plt.subplot(2, 2, 4)
     plt.axis('off')
-    stats_text = f'''
-📋 統計サマリー
+    stats_text = f'''📋 統計サマリー
 
-データ数: {{len(df)}}
-平均値: {{df.iloc[:, -1].mean():.2f}}
-最大値: {{df.iloc[:, -1].max()}}
-最小値: {{df.iloc[:, -1].min()}}
-標準偏差: {{df.iloc[:, -1].std():.2f}}
+データ数: {len(df)}
+平均値: {df.iloc[:, -1].mean():.2f}
+最大値: {df.iloc[:, -1].max()}
+最小値: {df.iloc[:, -1].min()}
+標準偏差: {df.iloc[:, -1].std():.2f}
 
 🎯 {idea}
-Vive Paradigm プロトタイプ
-    '''
+Vive Paradigm プロトタイプ'''
     plt.text(0.1, 0.5, stats_text, fontsize=12, verticalalignment='center',
              bbox=dict(boxstyle="round,pad=0.3", facecolor="lightblue", alpha=0.7))
     
