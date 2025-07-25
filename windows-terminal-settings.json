@@ -1,0 +1,168 @@
+{
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+    "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+    "profiles": {
+        "defaults": {
+            "fontFace": "Cascadia Code",
+            "fontSize": 12,
+            "startingDirectory": "D:\\",
+            "colorScheme": "Campbell",
+            "useAcrylic": false,
+            "acrylicOpacity": 0.8
+        },
+        "list": [
+            {
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+                "name": "PowerShell",
+                "commandline": "powershell.exe",
+                "startingDirectory": "D:\\",
+                "colorScheme": "Campbell",
+                "tabTitle": "PowerShell",
+                "icon": "ms-appx:///ProfileIcons/{61c54bbd-c2c6-5271-96e7-009a87ff44bf}.png"
+            },
+            {
+                "guid": "{claude-president}",
+                "name": "Claude President",
+                "commandline": "powershell.exe -NoExit -Command \"cd 'D:\\WD126_future-work-style'; Write-Host '🚀 Claude President Session' -ForegroundColor Cyan\"",
+                "startingDirectory": "D:\\WD126_future-work-style",
+                "tabTitle": "President",
+                "colorScheme": "One Half Dark",
+                "icon": "🤖"
+            },
+            {
+                "guid": "{claude-multiagent}",
+                "name": "MultiAgent Hub",
+                "commandline": "powershell.exe -NoExit -Command \"cd 'D:\\'; Write-Host '🎯 MultiAgent Control Hub' -ForegroundColor Green\"",
+                "startingDirectory": "D:\\",
+                "tabTitle": "MultiAgent",
+                "colorScheme": "Tango Dark",
+                "icon": "🎮"
+            },
+            {
+                "guid": "{claude-worker1}",
+                "name": "Worker 1",
+                "commandline": "powershell.exe -NoExit -Command \"cd 'D:\\'; Write-Host '⚡ Worker 1 Ready' -ForegroundColor Yellow\"",
+                "startingDirectory": "D:\\",
+                "tabTitle": "Worker1",
+                "colorScheme": "Solarized Light",
+                "icon": "🔧"
+            },
+            {
+                "guid": "{claude-worker2}",
+                "name": "Worker 2", 
+                "commandline": "powershell.exe -NoExit -Command \"cd 'D:\\'; Write-Host '🎨 Worker 2 Ready' -ForegroundColor Magenta\"",
+                "startingDirectory": "D:\\",
+                "tabTitle": "Worker2",
+                "colorScheme": "Vintage",
+                "icon": "🎨"
+            },
+            {
+                "guid": "{claude-worker3}",
+                "name": "Worker 3",
+                "commandline": "powershell.exe -NoExit -Command \"cd 'D:\\'; Write-Host '🔬 Worker 3 Ready' -ForegroundColor Blue\"",
+                "startingDirectory": "D:\\",
+                "tabTitle": "Worker3", 
+                "colorScheme": "Campbell Powershell",
+                "icon": "🔬"
+            }
+        ]
+    },
+    "schemes": [
+        {
+            "name": "Claude Theme",
+            "foreground": "#CCCCCC",
+            "background": "#1E1E1E",
+            "cursorColor": "#FFFFFF",
+            "black": "#0C0C0C",
+            "red": "#C50F1F",
+            "green": "#13A10E",
+            "yellow": "#C19C00",
+            "blue": "#0037DA",
+            "purple": "#881798",
+            "cyan": "#3A96DD",
+            "white": "#CCCCCC",
+            "brightBlack": "#767676",
+            "brightRed": "#E74856",
+            "brightGreen": "#16C60C",
+            "brightYellow": "#F9F1A5",
+            "brightBlue": "#3B78FF",
+            "brightPurple": "#B4009E",
+            "brightCyan": "#61D6D6",
+            "brightWhite": "#F2F2F2"
+        }
+    ],
+    "keybindings": [
+        {
+            "command": "newTab",
+            "keys": "ctrl+t"
+        },
+        {
+            "command": {
+                "action": "splitPane",
+                "split": "vertical"
+            },
+            "keys": "ctrl+shift+d"
+        },
+        {
+            "command": {
+                "action": "splitPane", 
+                "split": "horizontal"
+            },
+            "keys": "ctrl+shift+minus"
+        },
+        {
+            "command": "closePane",
+            "keys": "ctrl+shift+w"
+        },
+        {
+            "command": {
+                "action": "newTab",
+                "profile": "{claude-president}"
+            },
+            "keys": "ctrl+alt+p"
+        },
+        {
+            "command": {
+                "action": "newTab",
+                "profile": "{claude-multiagent}"
+            },
+            "keys": "ctrl+alt+m"
+        },
+        {
+            "command": {
+                "action": "moveFocus",
+                "direction": "down"
+            },
+            "keys": "alt+down"
+        },
+        {
+            "command": {
+                "action": "moveFocus",
+                "direction": "left"
+            },
+            "keys": "alt+left"
+        },
+        {
+            "command": {
+                "action": "moveFocus",
+                "direction": "right"
+            },
+            "keys": "alt+right"
+        },
+        {
+            "command": {
+                "action": "moveFocus",
+                "direction": "up"
+            },
+            "keys": "alt+up"
+        }
+    ],
+    "actions": [
+        {
+            "command": "unbound",
+            "keys": "ctrl+v"
+        }
+    ],
+    "copyOnSelect": false,
+    "copyFormatting": "none"
+}
